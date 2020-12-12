@@ -102,7 +102,7 @@ function Home() {
       />
     </div>
   )
-  // iksnimel olua
+  // iksnimel oluap
 
   const QRCodeComponent = () => (
     <div className={styles.field}>
