@@ -147,3 +147,21 @@
   font-size: 18px;
   color: #1abc9c;
 }
+
+.time_container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.time_text {
+  color: white;
+  font-size: 22px;
+}
+.time {
+  color: #1abc9c;
+  font-size: 28px;
+}
+.sub {
+  color: #1abc9c;
+  font-size: 14px;
+}
