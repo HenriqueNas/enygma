@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import styles from './styles.module.css'
+import confetti from 'canvas-confetti'
 
 function Apple() {
   const [email, setEmail] = useState(false)
   const [time, setTime] = useState('')
   const [name, setName] = useState('')
+
 
   const emails = [
     {
@@ -197,6 +199,30 @@ function Apple() {
     email = email.target.value.toLowerCase()
     const person = emails.filter(pessoa => pessoa.email == email).shift();
     if (!!person) {
+      var end = Date.now() + (15 * 1000);
+      var colors = ['#FCE300', '#1abc9c'];
+
+      (function frame() {
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        });
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+
       const name = person.email.split('.').shift()
       setTime(person.time)
       setName(name)
@@ -224,7 +250,7 @@ function Apple() {
     return (
       <div className={styles.time_container}>
         <span className={styles.time_text}>
-          Parabéns! Você provou ser incrível.
+          <strong>Parabéns!</strong> Você provou ser incrível.
           <br />
           <br />
           Vá amanhã às {time}, na Effecti, para retirar seu prêmio!!
