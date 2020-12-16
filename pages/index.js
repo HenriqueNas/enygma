@@ -118,6 +118,15 @@ function Home() {
   const Comeback = () => (
     <div className={styles.comeback}>
       <h1>Volte Amanhã</h1>
+      <br />
+      <div className={styles.field}>
+        <Image
+          src="/comeback.png"
+          alt="QRCode"
+          width={400}
+          height={400}
+        />
+      </div>
     </div>
   )
 
