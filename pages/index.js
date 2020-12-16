@@ -115,11 +115,18 @@ function Home() {
     </div>
   )
 
+  const Comeback = () => (
+    <div className={styles.comeback}>
+      <h1>Volte Amanhã</h1>
+    </div>
+  )
+
   return (
     <>
       { !author && !code ? <AuthorComponent /> : null}
       { author && !code ? <MathComponent /> : null}
-      { code ? <QRCodeComponent /> : null}
+      { code ? <Comeback /> : null}
+      {/* { code ? <QRCodeComponent /> : null} */}
     </>
   )
 }
