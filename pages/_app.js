@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Paulo Leminski</title>
+        <title>Mr Nobody</title>
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
       </Head>
       <Component {...pageProps} />
