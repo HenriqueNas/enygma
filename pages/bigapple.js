@@ -199,10 +199,18 @@ function Apple() {
     email = email.target.value.toLowerCase()
     const person = emails.filter(pessoa => pessoa.email == email).shift();
     if (!!person) {
-      var end = Date.now() + (15 * 1000);
+      var end = Date.now() + (3 * 1000);
       var colors = ['#FCE300', '#1abc9c'];
+      var colors2 = ['#0052cc', '#ffffff'];
+
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
 
       (function frame() {
+
         confetti({
           particleCount: 2,
           angle: 60,
@@ -217,6 +225,22 @@ function Apple() {
           origin: { x: 1 },
           colors: colors
         });
+
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors2
+        });
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors2
+        });
+
 
         if (Date.now() < end) {
           requestAnimationFrame(frame);
