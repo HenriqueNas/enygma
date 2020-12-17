@@ -114,8 +114,12 @@ function Apple() {
       time: '11:45'
     },
     {
-      email: 'helton.eissmann',
+      email: 'natalia.beckheuser',
       time: '11:45'
+    },
+    {
+      email: 'helton.eissmann',
+      time: '13:30'
     },
     {
       email: 'romario.melo',
