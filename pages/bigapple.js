@@ -47,11 +47,11 @@ function Apple() {
     },
     {
       email: 'bruno.santana',
-      time: '9:30'
+      time: 'NaN',
     },
     {
       email: 'caio.will',
-      time: '9:45'
+      time: 'NaN',
     },
     {
       email: 'camila.lenz',
@@ -59,7 +59,7 @@ function Apple() {
     },
     {
       email: 'carolina.meurer',
-      time: '10:00'
+      time: 'NaN',
     },
     {
       email: 'caroline.antonello',
@@ -119,7 +119,7 @@ function Apple() {
     },
     {
       email: 'isabelle.langkammer',
-      time: 'nan'
+      time: 'NaN',
     },
     {
       email: 'jean.silva',
@@ -131,11 +131,11 @@ function Apple() {
     },
     {
       email: 'kelly.mathias',
-      time: '14:00'
+      time: 'NaN',
     },
     {
       email: 'lizandra.piedade',
-      time: 'nan'
+      time: 'NaN'
     },
     {
       email: 'yan.gomes',
@@ -183,7 +183,7 @@ function Apple() {
     },
     {
       email: 'rafael.moreira',
-      time: 'nan'
+      time: 'NaN',
     },
     {
       email: 'ruan.euler',
@@ -271,31 +271,59 @@ function Apple() {
   }
 
   const TimeComponent = () => {
-    return (
-      <div className={styles.time_container}>
-        <span className={styles.time_text}>
-          <strong>Parabéns!</strong> Você provou ser incrível.
+    if (time == 'NaN') {
+      return (
+        <div className={styles.time_container}>
+          <span className={styles.time}>
+            <strong>Parabéns!</strong> Você provou ser incrível.
+            <br />
+            <br />
+          </span>
+          <span className={styles.time_text}>
+            Hey {name}, gostaríamos de te dar um presente e um abraço.
+            <br />
+            <br />
+            Mas já ques está tão longe, isso não será possível.
+            <br />
+            <br />
+            Que tal ficar de olho na tua caixa de correiros, hein?
+            <br />
+          </span>
           <br />
           <br />
-          Vá amanhã às {time}, na Effecti, para retirar seu prêmio!!
+          <hr />
+          <br />
+        </div>
+      )
+    } else {
+      return (
+        <div className={styles.time_container}>
+          <span className={styles.time_text}>
+            <strong>Parabéns!</strong> Você provou ser incrível.
+            <br />
+            <br />
+            Vá amanhã às {time}, na Effecti, para retirar seu prêmio!!
+            <br />
+            <br />
+            Estamos no aguardo.'
+          </span>
           <br />
           <br />
-          Estamos no aguardo.
-        </span>
-        <br />
-        <br />
-        <hr />
-        <br />
-        <span className={styles.time}>
-          Sexta-Feira (18/12) às {time}
-        </span>
-        <br />
-        <br />
-        <span className={styles.sub}>
-          <i>esse horário é exclusivo seu {name}</i>
-        </span>
-      </div>
-    )
+          <hr />
+          <br />
+          <span className={styles.time}>
+            Sexta-Feira (18/12) às {time}
+          </span>
+          <br />
+          <br />
+          <span className={styles.sub}>
+            <i>esse horário é exclusivo seu {name}</i>
+          </span>
+        </div>
+      )
+    }
+
+
   }
 
   return (
