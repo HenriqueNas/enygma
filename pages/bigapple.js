@@ -66,6 +66,10 @@ function Apple() {
       time: '10:00'
     },
     {
+      email: 'daiane.carl',
+      time: '10:00'
+    },
+    {
       email: 'caroline.fachini',
       time: '10:30'
     },
