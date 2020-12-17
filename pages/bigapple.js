@@ -179,7 +179,7 @@ function Apple() {
     },
     {
       email: 'priscila.zwang',
-      time: '15:30'
+      time: '13:30'
     },
     {
       email: 'rafael.moreira',
