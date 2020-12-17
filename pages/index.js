@@ -134,8 +134,7 @@ function Home() {
     <>
       { !author && !code ? <AuthorComponent /> : null}
       { author && !code ? <MathComponent /> : null}
-      { code ? <Comeback /> : null}
-      {/* { code ? <QRCodeComponent /> : null} */}
+      { code ? <QRCodeComponent /> : null}
     </>
   )
 }
